@@ -18,3 +18,9 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+        env:
+        - name: FILE_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: guest-book
+              key: ui_properties_file_name
